@@ -2,6 +2,8 @@
 
 import * as indexFuncs from '../pages/indexPage'
 import * as dashFuncs from '../pages/dashboardPage'
+import * as roomFuncs from '../pages/roomsPage'
+
 
 describe ('Regression test suite', function(){
 
@@ -19,10 +21,14 @@ describe ('Regression test suite', function(){
 
     
 
-it('T2: Create room', function(){
- 
+    it('T2: Create room', function(){
+        
+        dashFuncs.goToRooms(cy)
+        roomFuncs.assertRooms(cy)
+        roomFuncs.createRoom(cy)
+
     
-})
+    })
 
 
 

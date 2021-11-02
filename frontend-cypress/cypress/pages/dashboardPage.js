@@ -20,12 +20,16 @@ cy.get(userField).contains(user)
 function dashLogOut(cy){
     cy.get(logOutBtn).click()
 }
+function goToRooms(cy){
+    cy.get(roomsView).click()
+}
 
 //Export
 
 module.exports ={
 dashCheckTitle,
 dashAssertUser,
-dashLogOut
+dashLogOut,
+goToRooms
 
 }
